@@ -1,0 +1,24 @@
+<!-- CSS(Cascading Style Sheet)는 HTML 문서에 색이나 모양, 출력 위치 등
+	 웹 사이트의 외관을 꾸미는 언어이며
+	 CSS로 작성된 코드를 스타일 시트(style sheet)라고 부릅니다.
+	 CSS는 CSS1 -> CSS2 -> CSS3(CSS 레벨3)로 발전하였습니다.
+	 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>단위 정리</title>
+<style type="text/css">
+	body{font-size:20px}
+	h2{font-size:2em} /* 부모 body의 font-szie의 2배 */
+	/* rem: "em" 단위를 루트 요소(html 요소)의 글꼴 크기를 기준으로 조정한 것입니다. */
+	/* IE 기본 크기 12px or 16px*/
+	h3{font-size:2rem}
+</style>
+</head>
+<body>
+<hr>
+<h2>2em => 40px</h2>
+<h3>2rem => 16px * 2 = 32px</h3>
+</body>
+</html>

@@ -1,0 +1,16 @@
+@charset "EUC-KR";
+
+a {
+	text-decoration: none;
+} /* 밑줄이 사라진다. */
+a:visited {
+	color: red;
+}
+/* attr(href) 함수는 href의 속성값을 표시합니다. */
+a:link::after {
+	content: ' - ' attr(href);
+}
+
+a::after {
+	content: ' - href 없어요 - ';
+}

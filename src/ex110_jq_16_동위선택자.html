@@ -1,0 +1,39 @@
+<!-- 1-16 (동위 선택자).html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- 
+         1. A E - A요소에 포함되어 있는 요소 중 E요소를 선택한다.(후손요소)
+         2. A>E - A요소의 바로 아래에 포함되어 있는 E요소를 선택한다.(자식요소)
+         3. A+E - A요소의 다음으로 나오는 E요소를 선택한다.(형제요소) 
+    -->
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            /* 'li + li' : <li> 태그 바로 뒤의 형제 <li> 태그를 선택 */
+            $('li + li').css('color', '#ff0000');
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>Cat</li>
+            <li>Dog</li>
+            <li>Elephant</li>
+        </ul>
+    </div>
+    <div>
+        <p>아래는 적용하지 마세요.</p>
+        <ul>
+            <li>고양이</li>
+            <li>개</li>
+            <li>코끼리</li>
+        </ul>
+    </div>
+</body>
+
+</html>

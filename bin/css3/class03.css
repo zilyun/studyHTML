@@ -1,0 +1,5 @@
+@charset "EUC-KR";
+a:link{color: orange;}
+a:hover{text-align: none; color: black;}
+a:visited{color: red;}
+a:active{color: green;}

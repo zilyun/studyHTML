@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>input css</title>
+    <script>
+        window.onload = function () {
+            // getElementById() 메소드를이용해서 원하는 요소 객체에 접근할 수 있다.
+            var dom = document.getElementById("username");
+
+            // input 요소의 value 속성값을 대화 상자에 보여줍니다.
+            alert(dom.value);
+
+            var newValue = prompt("이름을 입력하세요");
+
+            // dom.value에 newValue 변수 값을 대입함으로써 <input> 요소의 
+            // value 속성 값을 변경시킬 수 있다.
+            dom.value = newValue;
+            dom.style.color = "red";
+            dom.style.background = "yellow";
+            dom.style.width = '200px';
+            dom.style.height = '50px';
+            dom.style['font-size'] = '30px';
+
+        }
+    </script>      
+</head>
+<body>
+
+    이름 : <input id="username" type="text" value="사용자의 이름은?">
+</body>
+</html>

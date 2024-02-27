@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="UTF-8">
+</head>
+<body> 
+<div id="top"></div>
+<h1>1.인용</h1>
+<h2>형식 그대로</h2>
+일반적인 HTML 문서는 Enter 키나 공백(space)을 인식하지 못합니다.<br>
+공백 인식은 &nbsp; &nbsp; &nbsp; 입니다.
+<h2>인용</h2>
+<blockquote>
+	&lt; or &gt; 와 같은 특수 문자는 웹 문서에서 태그를 표현하기 위해 <br>
+	사용하고 있습니다. 그래서 직접 사용할 수 없습니다. 이를 해결하기 위해 특수문자를 사용합니다. <br>
+	&#169; &#945; &#8364; 
+	<p><mark>자바스크립트</mark></p>
+</blockquote>
+<hr>
+
+
+<h1>2.표현</h1>
+<p>F<sub>(16)</sub>=15<sub>(10)</sub></p>
+<p>e<sup>2</sup></p>
+<!-- 
+	 ul : unordered list 
+	 li : list
+-->
+<ul>
+	<li> 스티브잡스 </li>
+	<li> 해를  품은 달 </li>
+</ul>
+<!-- ol : order list -->
+<ol>
+	<li> 예압 </li>
+	<li> 오예 </li>
+</ol>
+<!-- dl (definition list) : 사전과 같은 정의 목록 -->
+<!-- df (definition Title) 요소 : 정의할 용어의 제목 -->
+<!-- dd (definition Description) 요소 : 용어의 설명 -->
+<dl>
+	<dt> html5 </dt>
+	<dd> HTMl5는 웹의 핵심 마크업 언어이다.</dd>
+</dl>
+<hr>
+
+
+<h1>3.표</h1>
+<!-- tr, td, th : td와 유사하고 굵은 글씨, border 속성 :표 테두리의 두께 -->
+<table border="1">
+	<tr>
+		<th>1</th>
+		<td>2</td>
+		<td>3</td>
+	</tr>
+	<tr>
+		<th>4</th>
+		<td>5</td>
+		<td>6</td>
+	</tr>
+	<tr>
+		<td colspan=3>7</td>
+	</tr>
+	<tr>
+		<td colspan=2 rowspan=2>8</td>
+		<td>9</td>
+	</tr>
+	<tr>
+		<td>10</td>
+	</tr>
+</table>
+<table width="400px" height="400px" border="1"> 
+	<tr>
+		<td rowspan=3 width="50%" align="center">
+		test1
+		</td>
+		<td colspan=2 width="50%" height="34%" align="center">
+		test2
+		</td>
+	</tr>
+	<tr>
+		<td rowspan=2 align="center">
+		test3
+		</td>
+		<td height="33%" align="center">
+		test4
+		</td>
+	</tr>
+	<tr>
+		<td height="33%" align="center">
+		test5
+		</td>
+	</tr>
+</table>
+<hr>
+
+
+<h1>4.div와 span</h1>
+<h2>블락(block) 요소 - 한 줄의 공간을 준비합니다.</h2>
+<div>
+	나는 당신을 사랑합니다.
+</div>
+<div>
+	I love you.
+</div>
+<hr>
+<h2>인라인(inline) 요소 - 기존 글에 이어서 작성합니다.</h2>
+<span>
+	나는 당신을 사랑합니다.
+</span>
+<span>
+	I love you.
+</span>
+<hr>
+
+
+<h1>5. 시멘틱 요소</h1>
+<p>-각 요소가 의미(뜻)를 갖는다는 의미</p>
+<header>웹</header> <!-- 웹문서 머리말 영역 -->
+<nav>
+	<!--  (navigation)웹 문서에서다른 웹 문서나 문서 내의 
+			다른 부분으로 이동하는 부분을 나타내고자할 때 사용 -->
+	<ul>
+		<li>html5</li>
+		<li>css3</li>
+		<li>javascript</li>
+	</ul>
+</nav>
+<aside> <!-- 문서 내용과 관련된 여러 부수 정보를 나타내는데 사용 -->
+	<ul>
+		<li>test1</li>
+		<li>test2</li>
+		<li>test3</li>
+	</ul>
+</aside>
+<article> <!-- 웹 문서에서 주요 내용을 가진 본문 나타낼 때 사용 -->
+	<p>기본 문서 만들기</p>
+	<p>문서 꾸미기</p>
+	<p>목록 나열하기</p>
+</article>
+<footer> <!-- 웹 문서의 저자 정보, 저작권 정보, 
+				이용조건 등을 나타내기 위해서 사용 -->
+	작성자 : 히든 싱어 팀
+</footer>
+<hr>
+
+
+<h1>6. figure 태그 활용</h1>
+<!-- 아이콘 제공 사이트 -->
+<!-- https://www.iconfinder.com/search?q=icecream&price=free -->
+<!-- <figure>, <figcaption> 태그 :
+	HTML5에서는 이미지와 그 이미지에 해당하는 캡션을 묶어서 관리할 수 있는 태그가 제공 -->
+<!-- HTML5의 <figure>(본문에 삽입된 그림을 블록화하는 시맨틱 태그) 태그와 
+	 <figcaption>(그림 제목을 나타내는 태그) 태그를 이용한 페이지에서는 
+	 검색 엔진이 포함된 이미지가 어떤 것인가에 대해서 보다 정확하게 알 수 있습니다. -->
+<hr>
+<figure>
+<!-- 	<img src="./image/01.png">
+	<figcaption>똥쟁이</figcaption>
+	<img src="./image/02.png">
+	<figcaption>카카오톡</figcaption>
+	<img src="./image/03.png">
+	<figcaption>귀신</figcaption>
+	<img src="./image/04.png">
+	<figcaption>약올려?</figcaption>
+	<img src="./image/05.png">
+	<figcaption>터미네이터</figcaption> -->
+	<img src="./image/06.png">
+	<figcaption>번쩍번쩍번개</figcaption>
+</figure>
+<hr>
+
+
+<h1>7. detail와 summary 활용</h1>
+<details>
+	<summary>퀴즈1</summary>
+	<p>웹 개발자가 알아야 하는 웹 표준 3가지?</p>
+</details>
+<details>
+	<summary>정답1</summary>
+	<p>HTML, CSS, Javascript</p>
+</details>
+<hr>
+
+
+<h1>8. 인라인 시맨틱 태그</h1>
+<mark>HTML5</mark>
+수업 시작 시간은 <time>09:00</time>입니다.<br>
+진행사항 : <meter value="0.2">20%</meter><br>
+<!--  meter가 제공되지 않는 브라우저에서는 20%만 나타납니다. -->
+
+<!-- 어떠한 작업의 완료 진행 상황을 나타냅니다.
+	 value 속성 : max가 없는 경우 0.0 ~ 1.0의 값을 갖고 
+	 			max 값이 지정된 경우에는 0~max 사이의 값이 됩니다. -->
+자료 업로딩(20%) : <progress value="2" max="10"></progress><br>
+value="2" 제거 : <progress max="10"></progress>
+<hr>
+
+
+<h1>9. 하이퍼링크 연결 : 절대 주소이동(다른 웹 사이트의 문서로 이동)</h1>
+<h4>하이퍼 링크 예제</h4>
+<p>HTML 페이지에서 다른 HTML 페이지를 연결하는 고리를 하이퍼 링크라고 부른다.</p>
+<ul>
+	<li><a href="https://www.w3c.or.kr"
+			title="W3C 대한민국 사무국">W3C 사무국(KOR) 방문</a>
+	</li>
+</ul>
+<hr>
+
+
+<h1>10. 같은 폴더 내 문서로 이동</h1>
+<a href="" title="프로그램">컴퓨터</a> <!-- 새로고침 효과를 줄 수 있음. -->
+
+<a href="ex302_internal.html" title="프로그램 개발과">자바/html</a>
+<hr>
+
+
+<h1>11. 같은 문서 내 특정 위치로 이동</h1>
+<a href="#top">맨 위로 이동</a>
+<hr>
+
+
+<h1>12. 이미지 예제 1</h1>
+<figure>
+	<img src="./image/05.png" width="50px" height="50px" alt="터미네이터">
+	<figcaption>터미네이터(w-50,h-50)</figcaption> 
+	<img src="./image/05.png" width="75px" alt="터미네이터">
+	<figcaption>터미네이터(w-75)</figcaption> 
+	<img src="./images/05.png" width="75px" alt="터미네이터">
+	<figcaption>이미지를 찾을 수 없음</figcaption> 
+</figure>
+<hr>	
+
+
+<h1>13. 이미지 예제 2</h1>
+<figure>
+	<a href="https://www.naver.com">
+		<img src="./image/04.png" alt="웃냐?" width="66" height="66">
+	</a>
+	<figcaption>happy</figcaption> 
+</figure>
+<hr>
+
+
+<h1>14. 오디오 삽입하기</h1>
+<!-- src : 음악 파일의 경로 지정
+	controls: 음악 재생 도구를 출력할지를 지정
+	autoplay: 파일이 로드 되자마자 자동으로 재생시킨다는 의미
+	loop : 사운드를 반복할지 지정 
+ -->
+<audio  controls
+		src="./song/song.mp3"
+		loop
+		autoplay>
+</audio>
+<br>
+	song.mp3파일이 반복 자동재생 됩니다.
+<hr>
+
+
+<h1>15. 비디오 삽입하기</h1>
+<!-- src : 음악 파일의 경로 지정
+	controls: 음악 재생 도구를 출력할지를 지정
+	autoplay: 파일이 로드 되자마자 자동으로 재생시킨다는 의미
+	loop : 사운드를 반복할지 지정 
+ -->
+<video 	controls
+		autoplay
+		src="./video/bear.mp4"
+		width="360px"
+		height="240px"
+		>
+</video>
+<br>
+	song.mp3파일이 반복 자동재생 됩니다.
+<hr>
+
+
+<h1>16. 텍스트 입력 예제1</h1>
+<h3> 문자열, 암호 입력 및 텍스트 영역</h3>
+	<form method="get" action="ex402_result.html">
+		<input type="submit" value="회원가입">
+	</form>
+<hr>
+
+
+<h1>17. 텍스트 입력 예제2</h1>
+<h3> 문자열, 암호 입력 및 텍스트 영역</h3>
+	<form action="ex402_result.html"> <!-- 메소드 생략 => get 의미 -->
+			아이디 : &nbsp;
+		<input value="...ID 입력..." name="id"><br>
+			비밀번호: &nbsp;
+		<input value="" type="password" name="pwd" maxLength="3"><br>
+		<input type="submit" value="회원가입">
+	</form>
+	<!-- id=admin&pwd=123 <- 쿼리스트링 -->
+<hr>
+
+
+<h1>18. 텍스트 입력 예제3</h1>
+<h3> 문자열, 암호 입력 및 텍스트 영역</h3>
+	<form method="post" action="ex402_result.html">
+			아이디 : &nbsp;
+		<input value="...ID 입력..." name="id"><br>
+			
+		비밀번호:  <input value="" type="password" name="pwd" maxLength="3"><br>
+		나 보여요?:<input value="안보여요~" type="hidden" name="hide"><br>
+		<input type="submit" value="회원가입">
+	</form>
+<hr>
+
+
+<h1>19. 선택 입력 예제</h1>
+<form method="get" action="ex402_result.html">
+	<p>회원여부:
+		<input type="radio" name="member" value="yes" checked>회원
+		<input type="radio" name="member" value="no">비회원<br>
+	</p>
+	<p>성별:
+		<input type="radio" name="gender" value="male">남성
+		<input type="radio" name="gender" value="female">여성<br>
+	</p>
+	<p>취미(중복선택):
+		<input type="checkbox" name="hobby" value="read">독서
+		<input type="checkbox" name="hobby" value="movie" checked>영화
+		<input type="checkbox" name="hobby" value="music">음악
+		<input type="checkbox" name="hobby" value="sports">스포츠
+	</p>
+	<p>
+		직업:
+		<!--name : 요소의 이름
+			size : 콤보 박스에서 보일 수 있는 최대 항목의 갯수로 기본값은 1
+			multiple : 다수 항목 선택 가능
+			selected : 초기에 선택 상태로 출력 -->
+		<select name="job1" size="1">
+			<option value="student" selected>학생</option>
+			<option value="company">회사원</option>
+			<option value="teacher">교사</option>
+			<option value="sales">자영업</option>
+			<option value="others">기타</option>
+		</select>
+		&nbsp; 직업:
+		<select name="job2" size="4" multiple>
+			<option value="student" selected>학생</option>
+			<option value="company">회사원</option>
+			<option value="teacher">교사</option>
+			<option value="sales">자영업</option>
+			<option value="others">기타</option>
+		</select>
+	</p>
+	<input type="reset" value="초기화"> &nbsp; <!-- 페이지 새로고침 -->
+	<!-- value 가 없는 경우 브라우저마다 라벨이 다름 -->
+	<input type="submit" value="전송">
+	
+	<button>button태그</button>
+	<button type="button">button태그 type="button"</button>
+	<button type="reset">button태그 type="reset"</button>
+</form>
+<hr>
+
+
+<h1>20. 파일 입력 예제</h1>
+	<h3>기타 입력 : 파일 및 숨김</h3>
+	<!-- name 이 없으면 값을 넘길 수 없음 -->
+	<form method="get" action="ex402_result.html">
+		<input type="hidden" value="1234">
+			파일 업로드하기
+		<br>
+		<p><input type="file" name="file"></p>
+		<hr>
+		<input type="submit" value="전송">
+		<input type="reset" value="취소">
+	</form>
+<hr>
+
+<h1>21. 파일 확장자 지정 예제</h1>
+	<!-- 파일 확장자가 .gif, .jpg, .png 인 것만 지정해서 보이게 합니다. -->
+	<input type="file" accept=".gif, .jpg, .png">
+	
+	<!-- image/확장자 : image 파일 중 gif, jpg, png 인 것만 보이게 합니다. -->
+	<input type="file" accept="image/gif, image/jpg, image/png">
+	
+	<input type="file">
+<hr>
+
+
+<h1>22. 글 내용 예제</h1>
+	비고 : <br>
+	<textarea name="comments" rows="4" cols="40">나는 &lt;낑낑이&gt;입니당</textarea>
+<hr>
+
+
+<h1>23. label과 for 예제</h1>
+	<p> 라벨의 텍스트를 클릭해도 됩니다.
+		label 태그의 for 속성값과 input 태그의 id 속성값이 같으면 라벨의 텍스트를 
+		클릭해도 선택이 가능합니다.
+	</p>
+	<form method="get" action="ex402_result.html">
+		성별: &nbsp;
+	<label for="male">남성</label>
+	<input type="radio" name="gender" id="male" value="male" checked>
+	<label for="female">여성</label>
+	<input type="radio" name="gender" id="female" value="female" checked>
+	<br>
+	<hr>
+	<input type="submit" value="전송">
+	<input type="reset" value="취소">
+	</form>
+<hr>
+
+
+<h1>23. label과 이미지 예제</h1>
+	<p> 이미지들은 무엇이 있을까?
+	</p>
+	<form method="get" action="ex402_result.html">
+		아이콘: &nbsp;
+	<label>
+		<input type="radio" name="icon" value="1">
+		똥<img src="./image/01.png" width="75px" height="75px">
+	</label>
+	<label>
+		<input type="radio" name="icon" value="2">
+		채팅<img src="./image/02.png" width="75px" height="75px">
+	</label>
+	<label>
+		<input type="radio" name="icon" value="3">
+		얼굴<img src="./image/03.png" width="75px" height="75px">
+	</label>
+	<hr>
+	<input type="submit" value="전송">
+	<input type="reset" value="취소">
+	</form>
+<hr>
+
+
+<h1>24. 텍스트 라벨 예제</h1>
+	<p> 업로드할 파일을 선택하세요 </p>
+	<form method="get" action="ex402_result.html">
+		<fieldset>
+			<label>
+				<img src="./image/07_fileupload.png" width="50px" height="50px">
+				<input type="file" name="fileupload" style="display:none">
+			</label>
+			<hr>
+			<input type="submit" value="전송">
+			<input type="reset" value="취소">
+		</fieldset>
+	</form>
+<hr>
+
+
+<h1>25. 고급 형식으로 입력하기 : 서식이 있는 텍스트</h1>
+	<p> 업로드할 파일을 선택하세요 </p>
+	<form action="ex402_result.html">
+		<!--  type="email" : 이메일을 입력 받기 위한 입력 창 -->
+		<!--  required : 사용자가 필수적으로 입력을 하도록 검증 -->
+		<p>Email : <input type="email" name="email" required></p>	
+		<p><input type="submit" value="전송"></p>
+	</form>
+		<hr>
+	<form action="ex402_result.html">
+		<!--  type="email" : 이메일을 입력 받기 위한 입력 창 -->
+		<!--  required : 사용자가 필수적으로 입력을 하도록 검증 -->
+		<p>URL : <input type="url" name="url" required></p>	
+		<p><input type="submit" value="전송"></p>
+	</form>
+<hr>
+
+
+<h1>26. 정규 표현식</h1>
+	<form action="ex402_result.html">
+	<!-- placeholder : 입력값에 대한 힌트 또는 예시 값 
+		 pattern 속성 : 원하는 전화번호와 자리수에 유효한 패턴을 지정,
+		 정규 표현식(regular expression: 특정한 규칙을 가진 문자열의 집합을 표현하는데 
+		 			사용하는 형식 언어)으로 정의
+		 형식)
+		 pattern="[A-Za-z]{no}" : no 개 만큼의 영문자를 입력
+		 pattern="[0-9]{no}" : no 개 만큼의 숫자를 입력
+		 pattern="[A-Za-z0-9]{min,max}" : 영문자와 숫자를 min~max 만큼의 글자 수 입력
+		 pattern="[0-9]+" : 숫자를 1개 이상 입력 
+		 
+		 의미)
+		 "[0-9]" => "[0123456789]"
+		 "[A-Z]" => "[ABCDEFGHIJKLMNOPQRSTUVWXYZ]
+	-->
+		<p>Tel : <input type="tel" 
+						placeholder="00*-000*-0000"
+						name="tel"
+						pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}"
+						required>
+		</p>
+		<p><input type="submit" value="전송"></p>
+	</form>
+	
+	<form action="ex402_result.html">
+		<!-- 입력한 텍스트를 한번에 지울 수 있는 x 버튼이 추가가 되어 있다. -->
+		<p>Search : <input type="search" name="search" placeholder="Search..."></p>	
+		<p><input type="submit" value="전송"></p>
+	</form>
+<hr>
+
+
+<h1>27. DATE 예제</h1>
+	<form method="get" action="ex402_result.html">
+		<table>
+			<tr>
+				<td>date (연-월-일)</td>
+				<td>month (연도-월)</td>
+				<td>week (연도-주)</td>
+			</tr>
+			<tr>
+				<td><input type="date" name="date"></td>
+				<td><input type="month" name="month"></td>
+				<td><input type="week" name="week"></td>
+			</tr>
+		</table>
+		<input type="submit" value="전송">
+	</form>
+<hr>
+
+
+<h1>27. 시간 입력 예제</h1>
+	<form method="get" action="ex402_result.html">
+		<table>
+			<tr>
+				<td width="34%">&nbsp;&nbsp; time (시간)</td>
+				<td width="33%">datetime-local (지역시간)</td>
+				<td width="33%">............. (수령시간)</td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;<input type="time" name="time"></td>
+				<td><input type="datetime-local" name="datetime-local"></td>
+				<td>
+					<input type="time" name="time_from" min="09:00" max="18:00" required>에서
+					<input type="time" name="time_to" min="09:00" max="18:00" required> 사이
+				</td>
+			</tr>
+		</table>
+		<input type="submit" value="전송">
+	</form>
+<hr>
+
+
+<h1>28. 색상 및 숫자 입력 예제</h1>
+	<form method="get" action="ex402_result.html">
+		<p> 표지색상 : <input type="color" name="color"></p>
+		<!--  화살표 버튼으로 숫자를 조정할 수 있는 입력 형식 -->
+		<p> 제작권수 : <input type="number" min="0" max="100"  
+							step="10" value="20" name="number"></p>
+		<!-- 스크롤바를 움직여서 일정한 범위의 숫자를 입력 -->
+		<p> 표지두께 : 0.1mm <input type="range" min="1" max="5"
+							value="3" name="range" step="1">0.5mm</p>
+		<input type="submit" value="전송">
+	</form>
+<hr>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String 객체의 메소드 활용</title>
+  <meta charset="UTF-8">
+  <!-- 
+  var jumin = prompt("주민번호를 입력하세요?", "810908-3234567");
+  1. 주민번호 길이가 14개인지 확인 
+      alert()을 이용한 "주민번호의 길이는 14개 입니다." 
+      
+  2. 앞자리 6개가 숫자인지 확인 
+      - alert()을 이용한 "앞자리 형식을 확인하세요"
+      - isNaN()을 이용하면 숫자인지 아닌지 알 수 있어요
+          이 함수는 전달된 값이 숫자가 아니면 true를 반환하고, 
+          그렇지 않으면 false를 반환합니다
+          
+  3. 7번째 자리가 '-'인지 확인      
+        alert()을 이용한 "앞자리 입력 후 -을 입력하세요"
+        
+  4. 뒷자리 7자리가 숫자인지 확인   
+      alert()을 이용한 "뒷자리 형식을 확인하세요"
+      
+  5. 뒷자리 첫번째 자리가 1 또는 3이면 "남자" 와 배경색 파랑, 2 또는 4이면 
+  "여자" 와 배경색 pink - body에 출력
+
+  6. 만약 1~4번인 경우 alert창 나온 뒤 확인 버튼 클릭하면 body에 "형식에 
+  맞지 않습니다." 출력합니다.
+ -->
+ <style>
+    @keyframes start {
+      0% {color: white;}
+      20% {color: red;}
+      40% {color: orange;}
+      60% {color: yellow;}
+      80% {color: green;}
+      100% {color: white;}
+    }
+    div {
+      font-family: "굴림";
+      font-size: 10em;
+      text-align: center;
+      font-weight: bold;
+      animation: start 6s infinite;
+    }
+ </style>
+</head>
+<body>
+  <h3>String 객체의 메소드 활용</h3>
+  <hr>
+  <script>
+    // 주민번호를 입력받아 남자와 여자에 따라 body 배경색을 설정합니다. 
+    var jumin = prompt("주민번호를 입력하세요?", "960318-1231234");
+    
+    /* 2. 앞자리 6개가 숫자인지 확인 */
+    if(jumin.length !== 14) {
+      alert("주민번호의 길이는 14개 입니다.");
+    } 
+    
+    /* 3. 7번째 자리가 '-'인지 확인      
+       alert()을 이용한 "앞자리 입력 후 -을 입력하세요"
+    */
+    if(isNaN(jumin.substring(0, 6))) {
+      alert("앞자리 입력 후 -을 입력하세요");
+    }
+
+    /* 4. 뒷자리 7자리가 숫자인지 확인   
+       alert()을 이용한 "뒷자리 형식을 확인하세요"
+    */
+    if(isNaN(jumin.substring(8, 14))) {
+      alert("뒷자리 형식을 확인하세요");
+    }
+    
+    /* 5. 뒷자리 첫번째 자리가 1 또는 3이면 "남자" 와 배경색 파랑, 2 또는 4이면 
+        "여자" 와 배경색 pink - body에 출력
+    */
+    var test = jumin.substr(7, 1);
+    if (test == "1" || test == "3") {
+      document.write("<div>남자</div>")
+      document.body.style.background = 'skyblue';
+    } else if (test == "2" || test == "4") {
+      document.write("<div>여자</div>")
+      document.body.style.background = 'pink';
+    } else {
+    /* 6. 만약 1~4번인 경우 alert창 나온 뒤 확인 버튼 클릭하면 body에 "형식에 
+        맞지 않습니다." 출력합니다.
+    */
+      document.write("형식에 맞지 않습니다.");  
+    }
+  </script>
+
+</body>
+
+</html>

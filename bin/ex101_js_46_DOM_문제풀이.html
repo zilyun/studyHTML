@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>DOM 문제풀이</title>
+    <script>
+        window.onclick = function () {
+            // var img = document.createElement('img');
+            // img.setAttribute("src", "./image/pengsu.jpg");
+            // img.setAttribute("width", "300px");
+            // img.setAttribute("height", "300px");
+            // document.body.appendChild(img);
+            var output = '<img src="./image/pengsu.jpg" width="300px" height="300px">';
+            document.body.innerHTML += output;
+            window.onclick=null; // 이벤트 한번만 작동되도록 하기 위한 처리 
+        };
+    </script>
+</head>
+<body>
+    <h1>클릭하면 펭귄이 나타나게 해주세요</h1>
+</body>
+</html>

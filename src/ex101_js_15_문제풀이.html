@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- 
+다음과 같은 북 리스트가 존재하는 경우 주문할 책 수량을 입력받고 그 수량만큼 책 제목을 번호로
+선택해서 테이블로 출력합니다.
+
+참고)
+1. 책의 제목을 변수에 대입합니다.
+var book1 = "자바스크립트";
+var book2 = "HTML";
+var book3 = "CSS";
+
+2. prompt()함수를 이용해서 "주문할 책 수량을 입력 하세요?"라는 문구가 나오고 수량을 입력합니다.
+
+3. 책 제목을  번호로 선택하세요...
+   1.자바스크립트 
+   2.HTML
+   3.CSS
+
+   2번의 수량만큼 책 번호를 선택하게끔 반복합니다.
+   만약 범위에 없는 수를 입력하면 "리스트에 없는 책을 선택하셨습니다"라는 alert창을 띄우고
+   다시 입력 받습니다.
+
+4. 책 수량만큼 입력 받은 후  테이블을 이용해서 선택한 책의 제목이 출력되도록 합니다.
+ -->
+<html>
+
+<head>
+  <title>prompt 문제풀이</title>
+  <meta charset="UTF-8">
+  <style>
+    #books {
+      margin: 0 auto;
+      text-align: center;
+      border-collapse: separate;
+      border: 1px solid gray;
+    }
+
+    caption {
+      font-weight: bold;
+      color: olivedrab;
+    }
+
+    th {
+      background-color: lightgray;
+    }
+
+    td {
+      border: 1px solid gray;
+      padding: 0px 40px;
+    }
+
+    tr:nth-child(2n+1) {
+      background-color: skyblue;
+    }
+
+    tr:hover {
+      border-spacing: 0px;
+      border-bottom: 1px solid black;
+      background-color: rgb(221, 218, 218);
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    var book1 = "자바스크립트";
+    var book2 = "HTML";
+    var book3 = "CSS";
+    var count = prompt("주문할 책 수량을 입력 하세요.");
+    var title = "";
+
+    // while (true) {
+    //   var num = prompt("책 제목을  번호로 선택하세요...\n1."+book1+"\n2."+book2+"\n3."+book3);
+    //   if (num >= 1 && num <= 3) {
+    //     if (Number(num) === 1)
+    //       title += book1;
+    //     else if (Number(num) === 2)
+    //       title += book2;
+    //     else
+    //       title += book3;
+    //     break;
+    //   } else {
+    //     alert('리스트에 없는 책을 선택하셨습니다');
+    //   }
+    // }
+
+    var list = "<hr><table id=books>";
+    list += "<caption> 베스트 셀러 </caption>";
+    list += "<thead>";
+    list += "<tr>";
+    list += "<th> 순위 </th>";
+    list += "<th> 제목 </th>";
+    list += "</tr>";
+    list += "</thead>";
+    list += "<tbody>";
+    // for (var i = 1; i <= Number(count); i++) {
+    //   list += "<tr> <td>" + num + "</td> <td>" + title + "</td> </tr>";
+    // }
+    var book_list = "1."+book1+"\n2."+book2+"\n3."+book3;
+    for (var i = 1; i <= count; i++) {
+      var choice = prompt("책 제목을 번호로 선택하세요...\n" + book_list, "1");
+      // if (choice == "1") {
+      //   title = book1;
+      // } else if (choice == "2") {
+      //   title = book2;
+      // } else if (choice == "3") {
+      //   title = book3;
+      // } else {
+      //   alert('리스트에 없는 책을 선택하셨습니다');
+      //   i--; 
+      //   continue; // 88~91번 라인 실행하지 않고 74번 라인으로 이동 
+      //             // 상당히 유용한 처리 -> 처리하지 않고 다시 돌아감
+      // }
+      switch (choice) {
+        case "1" : title = book1; break;
+        case "2" : title = book2; break;
+        case "3" : title = book3; break;
+        default  : { 
+          alert('리스트에 없는 책을 선택하셨습니다');
+          i--; 
+          continue;
+        }
+      }
+      list += "<tr> <td>" + i + "</td> <td>" + title + "</td> </tr>";
+    }
+    list += "</tbody>";
+    list += "</table>";
+
+    document.body.innerHTML = list;
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <style>
+            div { width: 100px; height: 100px; }
+            .red { background-color: red; }
+            .orange { background-color: orange; }
+            .yellow { background-color: yellow; }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- 문서 객체 스타일 검사 -->
+    <script>
+        $(document).ready(function () {
+           let message='';
+           $('div').css('background-color', function (index, style) {
+                message += index + '번째 background-color 속성값은 ' + style + '\n';
+           });
+           console.log(message);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="red"></div>
+    <div class="orange"></div>
+    <div class="yellow"></div>
+</body>
+
+</html>
