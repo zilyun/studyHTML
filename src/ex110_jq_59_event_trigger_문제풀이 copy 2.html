@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        h1 {
+            margin: 3em;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!--    trigger() : 이벤트를 강제로 발생 시킵니다.
+                        형식) trigger(eventname)  -->
+    <script>
+        $(document).ready(function () {
+            // 이벤트를 연결합니다.
+            $('h1').click(function () {
+                $(this).html(function (index, html) {
+                    return html + "★";
+                });
+            }); // click end
+
+
+            $('#start').click(function () {
+                $('#start').val = "시작중....";
+                timer = setInterval(function () {
+                    // $('h1').last().trigger('click');
+                    // $('h1').eq(1).trigger('click');
+                    $('h1:last').trigger('click');
+                }, 1000);
+            });
+
+
+
+            $('#end').click(function () {
+                alert("트리거 종료");
+                clearInterval(timer); // 타이머 종료
+                $('#start').val = "트리거 시작";
+            });
+        }); // ready end
+    </script>
+</head>
+
+<body>
+    <h1>Start:</h1>
+    <h1>Start:</h1>
+    <input type="button" value="트리거 시작" id="start">
+    <input type="button" value="트리거 종료" id="end">
+</body>
+
+</html>
