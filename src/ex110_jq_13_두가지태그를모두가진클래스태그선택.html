@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>문제풀이3</title>
+    <script src="./js/jquery-3.7.1.js"></script>
+    <!-- 두 가지 클래스를 모두 가지는 태그 선택 -->
+    <script>
+        $(document).ready(function () {
+            // 두 가지 클래스를 모두 가지는 태그 선택
+            $('.item.select').css('color', 'orange');
+            // item 또는 select 클래스를 가지는 태그 선택 
+            //$('.item, .select').css('color', 'orange');
+        });
+    </script>
+</head>
+
+<body>
+    <h1 class="item">class="item"</h1>
+    <h1 class="item select">class="item select":나만 오렌지색 적용되어요.</h1>
+    <h1 class="item">class="item"</h1>
+</body>
+
+</html>

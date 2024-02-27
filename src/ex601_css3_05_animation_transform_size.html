@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>확대/축소</title>
+  <!-- 텍스트나 이미지를 회전이나 확대 등 다양한 기하학적인 모양으로 출력할 수 있다. 
+       변환에서 사용되는 회전 각도의 단위는 deg(각도-degree)이며 시계방향으로 회전한다. 
+  -->
+  <style>
+    div {
+      display: inline-block;
+      padding: 5px;
+      color: white;
+      background: olivedrab;
+      position: absolute;
+    }
+
+    /* 변환 */
+    div#scale0 {
+      left: 200px;
+    }
+
+    /* 변환 */
+    div#scale0:hover {
+      transform: scale(2, 4);
+    }
+
+    div#scale2 {
+      transform: scale(2, 2);
+      left: 500px; 
+    }
+
+    /* 마우스 올릴 때 추가 변환 */
+    div#scale2:hover {
+      transform: scale(4, 2);
+    }
+  </style>
+</head>
+<body>
+  <h3>다양한 Transform</h3>
+  아래는 확대/축소(sacle0) 적용됩니다.
+  또한 마우스를 올리면 추가적 변환이 일어납니다.
+  <hr>
+  <br><br><br>
+  <div id="scale0">내가 어떻게 변했나요?</div>
+  <div id="scale2">내가 어떻게 변했나요?</div>
+</body>
+</html>

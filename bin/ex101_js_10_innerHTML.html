@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>innerHTML 속성</title>
+  <meta charset="UTF-8">
+  <!-- 
+        body.innerHTML을 채울 때 사용합니다. 
+
+        
+  -->
+</head>
+
+<body>
+  <script>
+    document.body.innerHTML = '<h1>안녕하세요?</h1>';
+    document.body.innerHTML += '<h1>날씨가 정말 추워요~</h1>';
+    // console.log(document.body.innerHTML);
+    document.write('1 = ' + document.body.innerHTML + '<hr>'); // 문서에 있는 body안의  내용을 전체 출력하여 다시 쓴다. 
+    document.write('2 = ' + document.body.innerHTML + '<hr>'); // 문서에 있는 body안의  내용을 전체 출력하여 다시 쓴다. 
+    /* 안녕하세요?
+      날씨가 정말 추워요~
+      1 =
+      안녕하세요?
+      날씨가 정말 추워요~
+      --------------------------------------------
+      2 =
+      안녕하세요?
+      날씨가 정말 추워요~
+      1 =
+      안녕하세요?
+      날씨가 정말 추워요~
+      --------------------------------------------
+      --------------------------------------------
+    */
+  </script>
+</body>
+
+</html>

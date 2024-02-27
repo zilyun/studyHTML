@@ -1,0 +1,28 @@
+@charset "EUC-KR";
+
+p {
+	font-size: 10pt;
+} 
+a:link {
+	color: blue;
+}
+a:visited {
+	color: green;
+}
+a:active {
+	color: yellow;
+}
+
+/* p요소의 첫글자 */
+p::first-letter {
+	font-size: 30px;
+	background-color: silver;
+}
+
+/* h3요소의 앞에 content의 값(◆) 삽입 
+		한글 미음 + 한자 => (◆) 선택 */
+h3::before { content: "◆"; color: blue; }
+
+/* h3 요소의 뒤에 content의 값( ) 삽입하고 폰트의 크기 적용 
+		한글 이응 + 한자 + 3 => (ⓒ) */
+h3::after { content: " (ⓒcss)"; font-size: 20pt }

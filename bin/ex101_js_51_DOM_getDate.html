@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Date</title>
+       
+</head>
+<body>
+    <script>
+        // var date = new Date();
+
+        // setInterval( function ()
+        //     { document.body.innerHTML = new Date(); }
+        //     , 1000
+        // );
+        
+    window.onload = function () {
+        var clock = document.getElementById('clock');
+
+        setInterval(function (){ 
+            clock.innerHTML = new Date().toLocaleString();
+        }, 1000);
+    };
+    </script> 
+    <h1 id="clock"></h1>
+</body>
+</html>

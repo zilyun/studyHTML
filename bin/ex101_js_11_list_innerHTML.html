@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>innerHTML 속성</title>
+  <meta charset="UTF-8">
+  <!-- 
+        body.innerHTML을 채울 때 사용합니다. 
+  -->
+  <style>
+  #books {
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+  }
+
+  caption {
+    font-weight: bold;   
+    color: olivedrab;
+  }
+
+  th {
+    background-color: lightgray;
+  }  
+
+  td {
+    border-bottom: 1px solid black;
+  }
+
+  tr:hover {
+    border-spacing: 0px;
+    border-bottom: 1px solid black;
+    background-color: rgb(221, 218, 218);
+  }
+
+  </style>
+</head>
+
+<body>
+  <script>
+    var title1 = "대한민국 전국 맛집";
+    var title2 = "지적 대화를 위한 넓고 얕은 지식";
+    var title3 = "베스트셀러 절대로 읽지 마라.";
+
+    var list = "<table id=books>";
+    list += "<caption> 베스트 셀러 </caption>";
+    list += "<thead>";
+    list += "<tr>";
+    list += "<th> 순위 </th>";
+    list += "<th> 제목 </th>";
+    list += "</tr>";
+    list += "</thead>";
+    list += "<tbody>";
+    list += "<tr> <td> 1 </td> <td>" + title1 + "</td> </tr>";
+    list += "<tr> <td> 2 </td> <td>" + title2 + "</td> </tr>";
+    list += "<tr> <td> 3 </td> <td>" + title3 + "</td> </tr>";
+    list += "</tbody>";
+    list += "</table>";
+
+    document.body.innerHTML = list; 
+  </script>
+</body>
+
+</html>

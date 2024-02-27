@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- ex0101_welcomejavascript2.html
+     - 간단한 인사말을 화면에 표시하는 HTML/JavaScript 기본 예제
+     - 출력 방법
+       1. alert() 함수를 이용한 방법 - 브라우저에서 확인
+       2. document.write() 메소드를 이용한 방법 - 브라우저에서 확인 
+       3. console.log()를 이용한 방법 - F12의 Console탭 확인
+
+
+-->
+<html>
+<head>
+  <title>웹 문서 내장 방식</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  안녕하세요? 자바스크립트 세계에 오신 것을 환영합니다.^~^ <br>
+  <img src="./image/01.png" onclick="this.src='./image/05.png'" style="width:300px; height:300px">
+  <script>
+    alert("자바스크립트 안녕~!!!"); /* alert 함수를 이용한 출력 */
+    document.write("<br>Hello, \n\nwelcome to the JavaScript world!");
+    console.log("콘솔창-자바스크립트");
+  </script>
+</body>
+</html>

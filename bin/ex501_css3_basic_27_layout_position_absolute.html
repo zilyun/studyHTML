@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>위치 지정 속성(절대 위치)</title>
+<!-- 
+	position 속성은 문서 상에 요소를 배치하는 방법을 지정합니다.
+	1. static(기본값) : HTML 순서대로 화면에 표시됩니다.
+ -->
+<style>
+	div {
+		width: 100px;
+		height:100px;
+	}
+	
+	#box1 { background-color: red; }
+	#box2 { background-color: blue; }
+	
+	#box1:active {
+		position: absolute; /* 절대위치 - 가장 가까운 조상 중 position 속성이 static이 아닌 
+							   요소를 찾고 없으면 body를 기준으로 배치됩니다.  */
+		/* 수평 좌표 : 부모 요소(body) 왼쪽 위로부터 오른쪽 30px 떨어져서 배치 */
+		left: 30px; /* 부모 요소의 왼쪽에서 30px 간격 */
+		
+		/* 수직 좌표 : 부모 요소(body) 왼쪽 위로부터 아래로 50px 떨어져서 배치 */
+		top: 50px; /* 부모 요소의 위쪽에서 50px 간격 */
+	}
+	
+	#box2:active {
+		position: absolute;
+		left: 170px;	/* 수평 좌표 */
+		top : 50px; 	/* 수직 좌표 */
+	}
+</style>
+</head>
+<body>
+	<div id=box1></div>
+	<div id=box2></div>
+</body>
+</html>

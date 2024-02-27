@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>  
+  <head>  
+    <meta charset="UTF-8">
+    <title>inline 요소 : inline-block</title>
+
+     <!-- display : inline-block 스타일인 경우 아래의 각각 속성 중 일부분이 적용됩니다. 
+     	  			block 속성인 width 와 height 로 크기 조절 가능하고 
+     	  			padding, border, margin 조절 가능합니다. 
+     	  			inline-block 속성 또한 새 라인에서 시작하지 못하고 옆에 다른 요소를 배치합니다.
+      -->
+    <style>   
+		span {
+			display: inline-block;
+			border : 5px dotted orange;
+			background-color: pink;
+			width:250px;  /* 적용됨 */ 
+			height:100px; /* 적용됨 */ 
+			text-align: center; /* 적용됨 */ 
+		}
+    </style>  
+    
+  </head>
+  <body>
+	<span>display속성의 inline-block은 width, height 적용1</span>
+	<span>display속성의 inline-block은 width, height 적용2</span>
+  </body>
+</html>

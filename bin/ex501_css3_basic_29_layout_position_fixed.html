@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>위치 지정 속성(fixed)</title>
+<!-- fixed는 요소가 화면 크기를 벗어났을 경우 스크롤 막대가 나타나지 않습니다. -->
+<style>
+div {
+	width: 100px;
+	height: 100px;
+}
+
+#box1 {
+	position: fixed;
+	left: 300px;
+	top : 400px;
+	background-color: red;
+}
+
+#box2 {
+	position: fixed;
+	left: 400px;
+	top : 2000px;
+	background-color: blue;
+}
+</style>
+</head>
+<body>
+	<div id=box1></div>
+	<div id=box2></div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>text-test</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            const name = prompt("이름을 입력하세요.", "");
+            const position = prompt("위치를 입력하세요. (1, 2, 3 중 입력)", "");
+            const selector = 'h1:eq('+ (position-1) +')';
+            $(selector).text(name);
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+    <h1>Header-3</h1>
+</body>
+
+</html>
