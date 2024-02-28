@@ -38,10 +38,12 @@
             $textarea = $('textarea');
             $textarea.keyup(function () {
                 //console.log($textarea.val().length);
+                const inputLength = $(this).val().length;
+                const remain = Number($(this).attr('maxLength')) - inputLength + 1;
                 $h3 = $('h3');
                 $h3.html(function () {
-                    return "남은 글자수 : <span>" + $textarea.val().length + "</span>";
-                });
+                    return "남은 글자수 : <span>" + remain + "</span>";
+                }).css('width', '10em');
             });
         }); 
     </script>
@@ -50,7 +52,6 @@
 <body>
     <div>
         <p>지금 내 생각을 150자로 정리하세요.</p>
-        <h3 style="width: 10em;">최대 150자</h3>
         <h3>최대 150자</h3>
         <textarea cols="70" rows="5" maxlength="150"></textarea>
     </div>
