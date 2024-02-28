@@ -60,27 +60,35 @@
     -->
     <script>
         $(document).ready(function () {
+            const $span = $('span');
+            const $name = $('#name');
+            const $password = $('#password');
+
             // submit() : submit 버튼을 누를 때 발생합니다.
             $('#my-form').submit(function (event) {
-                const $span = $('span');
-                const $name = $('#name');
-                if($name.val().trim() == '') {
-                    // alert('이름을 입력하세요.');
-                    $name.focus();
-                    $span.eq(0).html('아이디를 입력하세요.');
-                    return false;
+                let count = 0;
+
+                // 입력 양식의 value를 가져옵니다.
+                // $trim(str) : str의 양쪽 공백을 제거 합니다.
+                const nameValue = $.trim($name.val());
+                if(nameValue=='') {
+                    count++;
+                    $name.next().html("아이디를 입력하세요"); // span 요소의 내용을 바꿉니다.
+                } else {
+                    $name.next().html('');
                 }
 
-                const $password = $('#password');
-                if($password.val().trim() == '') {
-                    // alert('비밀번호를 입력하세요.');
-                    $password.focus();
-                    $span.eq(1).html('비밀번호를 입력하세요.');
-                    return false;
+                const passwordValue = $.trim($password.val());
+                if(passwordValue=='') {
+                    count++;
+                    $password.next().html("비밀번호를 입력하세요"); // span 요소의 내용을 바꿉니다.
+                } else {
+                    $password.next().html('');
                 }
 
-                // 출력합니다.
-                alert($name.val() + ' : ' + $password.val());
+                if(count!=0){
+                    return false;
+                }
             });
         }); 
     </script>
