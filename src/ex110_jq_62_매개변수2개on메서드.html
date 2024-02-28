@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <style>
+       
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- 
+           매개 변수 2개인 on()메서드를 사용합니다. 
+    -->
+    <script>
+        $(document).ready(function () {
+            let count = 0;
+
+            $('p').on('click', function () {
+                // after() : 선택자의 다음 형제 위치에 추가합니다.
+                $(this).after("<p> 추가된 paragraph! " + count++ + "</p>");
+            });
+        }); 
+    </script>
+</head>
+
+<body>
+    <p>Click me!</p>
+    <span>end</span>
+</body>
+
+</html>
