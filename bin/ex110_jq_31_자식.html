@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        .descendants * {
+            display: block;
+            border: 2px solid lightgray;
+            color : lightgray;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 선택한 요소의 자식들을 찾습니다.
+            $("div").children().css({
+                "color" : "red",
+                "border" : "2px solid red"
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="descendants" style="width: 500px;">
+        div (current element)
+        <p>
+            p (child) <span> span (grandchild) </span>
+        </p>
+        <p>
+            p (child) <span> span (grandchild) </span>
+        </p>
+        <span>span(child)</span>
+    </div>
+</body>
+</html>

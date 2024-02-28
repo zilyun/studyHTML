@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            const radio = "";
+            $('input[name="icon"]').click(function () {
+                const imagepath = $('input[name="icon"]:checked').val();
+                $('img').attr('src', imagepath);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h3>선택한 그림 출력</h3>
+    <hr>
+    <div> radio 버튼을 클릭하면 이미지가 바뀝니다. </div>
+    <form action="">
+        <input type="radio" name="icon" value="./image/01.png">image1 <br>
+        <input type="radio" name="icon" value="./image/02.png" checked>image2 <br>
+        <input type="radio" name="icon" value="./image/03.png">image3 <br>
+        <img src="./image/02.png">
+    </form>
+</body>
+
+</html>
