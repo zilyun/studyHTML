@@ -60,19 +60,22 @@
     -->
     <script>
         $(document).ready(function () {
+            const $span = $('span');
+            const $name = $('#name');
+            const $password = $('#password');
+
             // submit() : submit 버튼을 누를 때 발생합니다.
             $('#my-form').submit(function (event) {
-                const $span = $('span');
-                const $name = $('#name');
-                if($name.val().trim() == '') {
+
+                if ($name.val().trim() == '') {
                     // alert('이름을 입력하세요.');
                     $name.focus();
                     $span.eq(0).html('아이디를 입력하세요.');
                     return false;
                 }
 
-                const $password = $('#password');
-                if($password.val().trim() == '') {
+
+                if ($password.val().trim() == '') {
                     // alert('비밀번호를 입력하세요.');
                     $password.focus();
                     $span.eq(1).html('비밀번호를 입력하세요.');
@@ -81,6 +84,28 @@
 
                 // 출력합니다.
                 alert($name.val() + ' : ' + $password.val());
+            });
+
+            $name.keyup(function (event) {
+                if ($name.val().trim() == '') {
+                    // alert('이름을 입력하세요.');
+                    $name.focus();
+                    $span.eq(0).html('아이디를 입력하세요.');
+                    return false;
+                } else {
+                    $span.eq(0).html('');
+                }
+            });
+
+            $password.keyup(function (event) {
+                if ($password.val().trim() == '') {
+                    // alert('비밀번호를 입력하세요.');
+                    $password.focus();
+                    $span.eq(1).html('비밀번호를 입력하세요.');
+                    return false;
+                } else {
+                    $span.eq(1).html('');
+                }
             });
         }); 
     </script>
