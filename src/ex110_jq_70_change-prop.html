@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <style>
+
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#all-check').change(function () {
+                console.log($(this).is(':checked')); // #all-check 문서 객체가 체크되었는지 확인합니다.
+                                                     // 체크된 경우 true, 해제된 경우 false 입니다.
+                $('#check-item>input:checkbox').prop('checked', $(this).is(':checked'));
+                //const chk = $(this).is(':checked'); // 이슈 발생
+                //$('div input').attr('checked', chk);
+            });
+        }); 
+    </script>
+</head>
+
+<body>
+    <label><input type="checkbox" id="all-check">All</label>
+    <div id="check-item">
+        <input type="checkbox">
+        <label>A Option</label>
+        <input type="checkbox">
+        <label>B Option</label>
+        <input type="checkbox">
+        <label>C Option</label>
+    </div>
+</body>
+
+</html>

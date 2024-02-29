@@ -4,37 +4,27 @@
 <head>
     <meta charset="UTF-8" />
     <style>
-        * {
-            margin: 5px; padding: 5px;
-            border: 3px solid black;
-        }
+       
     </style>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <!-- 
-            event.stopProgropagation();
-            event.preventDefault();
-            두 가지 메서드를 jQuery에서는 return false로 적용합니다.
+           매개 변수 2개인 on()메서드를 사용합니다. 
     -->
     <script>
         $(document).ready(function () {
-            // a태그 클릭시 이동합니다.
-            // 이동을 막아주세요
-            $('a').click(function (event) {
-                $(this).css('background-color', 'blue');
-                return false;
-            });
+            let count = 0;
 
-            $('div').click(function (event) {
-                $(this).css('background-color', 'orange');
+            $('p').on('click', function () {
+                // after() : 선택자의 다음 형제 위치에 추가합니다.
+                $(this).after("<p> 추가된 paragraph! " + count++ + "</p>");
             });
         }); 
     </script>
 </head>
 
 <body>
-    <div>
-        <a href="ex110_jq_59_event_trigger_문제풀이.html">트리거 예제</a> div태그
-    </div>
+    <p>Click me!</p>
+    <span>end</span>
 </body>
 
 </html>
